@@ -1,0 +1,274 @@
+{
+  "version": "0.0.1",
+  "custom": [
+    {
+      "cid": "C_SYQ",
+      "protocol": {
+        "version": "V_4",
+        "id": "P_SIG_ENGINE"
+      },
+      "Module": [
+        {
+          "name": "Engine",
+          "slave_address": 1,
+          "hold_reg_readonly": 0,
+          "input_reg": [
+            [
+              {
+                "belong": "fuelSys",
+                "label": "oilTem",
+                "num": 1,
+                "type": "x10",
+                "size": 2,
+                "friendly": "滑油进机温度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "fwaterOutTem",
+                "num": 1,
+                "type": "x10",
+                "size": 2,
+                "friendly": "淡水出机温度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "lubrOilOutTem",
+                "num": 1,
+                "type": "x10",
+                "size": 2,
+                "friendly": "增压器滑油出口温度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "fuelInTem",
+                "num": 1,
+                "type": "x10",
+                "size": 2,
+                "friendly": "燃油进机温度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "zhouTem",
+                "num": 9,
+                "type": "x10",
+                "size": 2,
+                "friendly": "轴温"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "lubrOilInMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "滑油进机压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "frontFilterMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "滑油滤前压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "fwaterInMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "淡水进机压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "back1",
+                "num": 1,
+                "type": "x100",
+                "size": 2
+              },
+              {
+                "belong": "fuelSys",
+                "label": "swaterInMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "海水进机压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "fuelOilMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "燃油压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "airPressMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "增压空气压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "airStartMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "起动空气压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "airControlMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "控制空气压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "boostOilMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "增压器滑油压力"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "back2",
+                "num": 2,
+                "type": "x100",
+                "size": 2
+              },
+              {
+                "belong": "fuelSys",
+                "label": "mainSpeed",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "转速"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "boostSpeed",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "增压器转速"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "pTem",
+                "num": 8,
+                "type": "x1",
+                "size": 2,
+                "friendly": "排温"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "turPtemUp",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "涡轮前排温上"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "turPtemDown",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "涡轮前排温下"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "turPtemTail",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "涡轮后排温"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "throOpen",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "油门开度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "back3",
+                "num": 4,
+                "type": "x1",
+                "size": 2
+              },
+              {
+                "belong": "fuelSys",
+                "label": "fixTem",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "补偿温度"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "oilGopMpa",
+                "num": 1,
+                "type": "x100",
+                "size": 2,
+                "friendly": "滑油滤器压差"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "pTempGop",
+                "num": 8,
+                "type": "x1",
+                "size": 2,
+                "friendly": "排温温差"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "pTempAvg",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "平均排温"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "back4",
+                "num": 1,
+                "type": "x1",
+                "size": 2
+              },
+              {
+                "belong": "fuelSys",
+                "label": "safeSpeed",
+                "num": 1,
+                "type": "x1",
+                "size": 2,
+                "friendly": "安保转速"
+              },
+              {
+                "belong": "fuelSys",
+                "label": "back5",
+                "num": 6,
+                "type": "x1",
+                "size": 2
+              },
+              {
+                "belong": "fuelSys",
+                "label": "totalTime",
+                "num": 1,
+                "type": "x10",
+                "size": 4,
+                "friendly": "累时"
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

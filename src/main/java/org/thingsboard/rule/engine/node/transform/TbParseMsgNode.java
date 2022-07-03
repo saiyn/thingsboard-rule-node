@@ -112,7 +112,7 @@ public class TbParseMsgNode extends TbAbstractTransformNode{
 
             return lexec.submit(()->{
 
-                Map<String, List<Float>> data = parse(jm.findValue("rawData").asText(), this.mb);
+                Map<String, List<Float>> data = parse(jm.findValue("rawData"), this.mb);
 
                 Map<String, Float> final_data = new HashMap<String, Float>();
 
@@ -164,6 +164,56 @@ public class TbParseMsgNode extends TbAbstractTransformNode{
                 }
             }
         }
+
+        return result;
+    }
+
+
+    private Map<String, List<Float>> parse(JsonNode raw, TbModbusMsgWrapper mb){
+
+
+        log.info("try to parse raw data: {}", raw);
+
+        Map<String, List<Float>> result = new HashMap<String, List<Float>>();
+
+        int index = 0;
+
+        for(TbModbusMsgWrapper.custom c : mb.custom){
+            for(TbModbusMsgWrapper.module m : c.Module){
+                if(m.input_reg.size() > 0){
+
+                    JsonNode jj = raw.findValue("input."+m.name);
+
+                    String val = "";
+
+                    if(jj != null) {
+                        val = raw.findValue("input." + m.name).asText();
+                        log.info("parse {} val:{}", ("input."+m.name), val);
+                    }else{
+
+                        log.info("can't load item: " + "input." + m.name);
+
+                        continue;
+                    }
+
+
+                    for(List<TbModbusMsgWrapper.inputReg> ii : m.input_reg){
+                        for(TbModbusMsgWrapper.inputReg i : ii){
+
+                            if(val != null){
+
+                                result.put(i.label, convertHexData(val, index, i.num, i.size, i.type));
+                                index += i.num * i.size * 2;
+                            }
+
+
+                        }
+                    }
+                }
+
+            }
+        }
+
 
         return result;
     }
